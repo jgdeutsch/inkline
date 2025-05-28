@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
+import SignupModal from './SignupModal';
 
 const Hero: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
 
   const fullText = "We're excited to share our product roadmap for Q2. The team has made significant progress on the new features. Can you review and provide feedback?";
   
@@ -28,6 +30,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
+    <>
     <section className="pt-32 pb-20 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -44,7 +47,12 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-              <Button variant="primary" size="lg" className="w-full sm:w-auto">
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full sm:w-auto"
+                onClick={() => setShowSignup(true)}
+              >
                 Start my 7-day trial
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto">
@@ -165,6 +173,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </section>
+    <SignupModal open={showSignup} onClose={() => setShowSignup(false)} />
+    </>
   );
 };
 
