@@ -33,13 +33,12 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-slate-800 leading-tight">
-              The AI writing partner
-              <span className="block mt-2">Mac desktop app
-              <span className="text-primary-600"> "they" took away</span></span>
+              The AI writing desktop app they took away.
+              <span className="text-primary-600"> Now back.</span>
             </h1>
             
             <p className="mt-6 text-xl text-slate-600 font-serif leading-relaxed">
-              Remember when your favorite writing assistant was a real Mac app? We're bringing it back - 
+              Remember when those AI writing guys had a desktop app? We do. We're bringing it back - 
               faster and better than ever. Get all the AI-powered grammar and style suggestions you love, 
               in a native macOS app that puts your privacy first.
             </p>
