@@ -26,7 +26,7 @@ const SignupModal: React.FC<SignupModalProps> = ({ open, onClose }) => {
       console.error('Signup request failed', error);
     } finally {
       onClose();
-      window.location.href = '/thankyou';
+      window.location.href = `${import.meta.env.BASE_URL}thankyou.html`;
     }
   };
 
