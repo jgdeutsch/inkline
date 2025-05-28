@@ -6,6 +6,7 @@ type ButtonProps = {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   size = 'md',
   className = '',
   onClick,
+  type = 'button',
 }) => {
   const baseStyles = "font-medium rounded-md transition-all duration-300 inline-flex items-center justify-center";
   
@@ -30,7 +32,8 @@ const Button: React.FC<ButtonProps> = ({
   };
   
   return (
-    <button 
+    <button
+      type={type}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
       onClick={onClick}
     >
