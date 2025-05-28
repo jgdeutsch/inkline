@@ -10,10 +10,23 @@ const SignupModal: React.FC<SignupModalProps> = ({ open, onClose }) => {
   const [email, setEmail] = useState('');
 
   if (!open) return null;
-
-  const handleSubmit = () => {
-    window.location.href = `mailto:jeff@thatsheaps.com?subject=Inkline%20Signup&body=Email:%20${encodeURIComponent(email)}`;
-    onClose();
+  const handleSubmit = async () => {
+    try {
+      await fetch('https://formsubmit.co/ajax/jeff@thatsheaps.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+    } catch (error) {
+      // ignore network errors and continue redirect
+      console.error('Signup request failed', error);
+    } finally {
+      onClose();
+      window.location.href = `${import.meta.env.BASE_URL}thankyou.html`;
+    }
   };
 
   return (
