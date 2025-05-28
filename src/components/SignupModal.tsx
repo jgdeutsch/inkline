@@ -10,7 +10,6 @@ const SignupModal: React.FC<SignupModalProps> = ({ open, onClose }) => {
   const [email, setEmail] = useState('');
 
   if (!open) return null;
-
   const handleSubmit = async () => {
     try {
       await fetch('https://formsubmit.co/ajax/jeff@thatsheaps.com', {
