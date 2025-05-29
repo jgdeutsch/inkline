@@ -16,26 +16,38 @@
       fbq('track', 'CompleteRegistration', { value: 1, currency: 'USD' });
     </script>
     <noscript>
-      <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=670643145968334&ev=PageView&noscript=1"
-      />
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=670643145968334&ev=PageView&noscript=1" />
     </noscript>
-      fbq('track', 'CompleteRegistration', {
-        value: 1,
-        currency: 'USD',
-      });
-    </script>
     <!-- End Meta Pixel Code -->
   </head>
-  <body class="font-serif flex items-center justify-center h-screen bg-slate-50 text-slate-800">
-    <noscript>
-      <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1263127035333773&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <div class="text-center">
-      <h1 class="text-3xl mb-4">Thank you for signing up!</h1>
-      <p>We'll be in touch soon.</p>
-    </div>
+  <body class="font-serif bg-white text-slate-800">
+    <header class="fixed w-full z-10 bg-white/95 backdrop-blur-sm shadow-sm py-3">
+      <div class="container mx-auto px-6 flex items-center justify-between">
+        <div class="flex items-center">
+          <svg class="h-8 w-8 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19 7-7 3 3-7 7-3-3z" />
+            <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+            <path d="m2 2 7.586 7.586" />
+            <circle cx="11" cy="11" r="2" />
+          </svg>
+          <span class="ml-2 text-2xl font-serif font-medium text-slate-800">Inkline</span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#features" class="text-slate-700 hover:text-primary-600 transition-colors font-serif">Features</a>
+          <a href="#testimonials" class="text-slate-700 hover:text-primary-600 transition-colors font-serif">Testimonials</a>
+          <a href="#faq" class="text-slate-700 hover:text-primary-600 transition-colors font-serif">FAQ</a>
+        </nav>
+        <a href="https://form.jotform.com/251478692528066" class="inline-flex items-center justify-center font-medium rounded-md transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 text-base px-4 py-2">
+          Start my 7-day trial
+        </a>
+      </div>
+    </header>
+    <main class="pt-40 pb-20">
+      <section class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-slate-800 mb-6">Thank you for signing up!</h1>
+        <p class="text-xl text-slate-600">We'll be in touch soon.</p>
+      </section>
+    </main>
   </body>
 </html>
+
