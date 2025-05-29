@@ -15,7 +15,14 @@ const CTA: React.FC = () => {
           </p>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="primary" size="lg">
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() =>
+                (window.location.href =
+                  'https://form.jotform.com/251478692528066')
+              }
+            >
               Start my 7-day trial
             </Button>
             <Button variant="outline" size="lg">
