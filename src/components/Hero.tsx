@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
-import SignupModal from './SignupModal';
 
 const Hero: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
-  const [showSignup, setShowSignup] = useState(false);
 
   const fullText = "We're excited to share our product roadmap for Q2. The team has made significant progress on the new features. Can you review and provide feedback?";
   
@@ -51,7 +49,10 @@ const Hero: React.FC = () => {
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto"
-                onClick={() => setShowSignup(true)}
+                onClick={() =>
+                  (window.location.href =
+                    'https://form.jotform.com/251478692528066')
+                }
               >
                 Start my 7-day trial
               </Button>
@@ -173,7 +174,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-    <SignupModal open={showSignup} onClose={() => setShowSignup(false)} />
     </>
   );
 };

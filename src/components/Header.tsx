@@ -34,7 +34,14 @@ const Header: React.FC = () => {
           <a href="#faq" className="text-slate-700 hover:text-primary-600 transition-colors font-serif">FAQ</a>
         </nav>
         
-        <Button variant="primary" size="md">
+        <Button
+          variant="primary"
+          size="md"
+          onClick={() =>
+            (window.location.href =
+              'https://form.jotform.com/251478692528066')
+          }
+        >
           Start my 7-day trial
         </Button>
       </div>
